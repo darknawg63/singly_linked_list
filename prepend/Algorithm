@@ -1,0 +1,45 @@
+   300         150         200         315         100
+
+[15][150]   [7][200]    [2][315]    [8][100]    [11][null]
+
+    1           2           3           4           5
+
+head [300]
+
+==========================================================|
+
+append(n):
+
+create node tail
+set tail->data to n
+if head is empty
+    set head to tail
+    set tail->next to null
+    return
+create pointer to last node named last
+set last to head
+while last->next not null
+    last = last->next
+
+set last->next to tail
+set tail->next to null
+
+reverse():
+
+create pointer to first node named current
+create pointer to previous node named previous
+create pointer to next node named next
+set current to head
+set previous to null
+while current not null
+    next = current->next
+    current->next = previous
+    previous = current
+    current = next
+    
+
+
+
+
+
+
